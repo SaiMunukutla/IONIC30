@@ -37,7 +37,8 @@ RUN echo y | android update sdk --all --no-ui --filter platform-tools,tools,buil
 RUN echo y | ionic start ionic-demo sidemenu
 RUN cd /ionic-demo && \
 ionic platform add android && \
-cordova build --release android
+ionic build android
+#cordova build --release android
 EXPOSE 8100 35729
 CMD ["ionic", "serve", "--all"]
 VOLUME /workspace
